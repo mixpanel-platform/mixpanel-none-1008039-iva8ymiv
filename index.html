@@ -23,14 +23,18 @@
         cursor: pointer;
         font-weight: bold;
       }
+
       .node circle {
         fill: #fff;
         stroke: steelblue;
         stroke-width: 1.5px;
       }se
+
       .node {
         font: 10px sans-serif;
+
       }
+
       .link {
         fill: none;
         stroke: steelblue;
@@ -165,6 +169,7 @@
           events.push(params);
           promises.push(MP.api.funnel.apply(MP.api, events));
         });
+
           Promise.all(promises).then(function(promiseArray){
             _.each(promiseArray, function(data){
                 total = 0;
